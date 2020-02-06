@@ -1,8 +1,8 @@
 # Maintainer: Srevin Saju <srevin03@gmail.com> 
 
-pkgname=sugar3-toolkit-gtk3
+pkgname=sugar-toolkit-gtk3
 pkgver=0.116
-pkgrel=1
+pkgrel=5
 pkgdesc="Sugar GTK library"
 arch=('x86_64')
 url="https://sugarlabs.org/"
@@ -14,14 +14,14 @@ makedepends=('intltool' 'gobject-introspection')
 source=('https://github.com/sugarlabs/sugar-toolkit-gtk3/archive/v0.116.tar.gz')
 sha256sums=('64165bf01a53a8267ce9538808e1d077a51eff3616d41bb3bbdf2e538e5ac102')
 
-prepare() {
-  cd sugar-toolkit-gtk3-$pkgver
-}
 
 build() {
   cd sugar-toolkit-gtk3-$pkgver
-  ./autogen.sh --prefix=/usr --sysconfdir=/etc \
-             --disable-schemas-compile
+  # Disable hardened build until fixed upstream
+  # https://bugs.sugarlabs.org/ticket/4886
+  export CFLAGS=${CFLAGS/ -fno-plt}
+  export LDFLAGS=${LDFLAGS/,-z,now}
+  ./autogen.sh --prefix=/usr --with-python3
 }
 package() {
   cd sugar-toolkit-gtk3-$pkgver
