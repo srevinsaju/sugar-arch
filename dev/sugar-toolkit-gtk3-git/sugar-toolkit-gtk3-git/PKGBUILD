@@ -1,7 +1,7 @@
 # Maintainer: Srevin Saju <srevin03@gmail.com> 
 
-pkgname=sugar-toolkit-gtk3
-pkgver=0.116-git
+pkgname=sugar-toolkit-gtk3-git
+pkgver=0.116.g
 pkgrel=5
 pkgdesc="Sugar GTK library"
 arch=('x86_64')

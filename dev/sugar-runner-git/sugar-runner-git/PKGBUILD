@@ -1,7 +1,7 @@
 # Maintainer: Srevin Saju <srevin03@gmail.com>
 
-pkgname=sugar-runner
-pkgver=0.110.0
+pkgname=sugar-runner-git
+pkgver=0.110.0.g
 pkgrel=5
 pkgdesc="Scripts to run Sugar"
 arch=('x86_64')

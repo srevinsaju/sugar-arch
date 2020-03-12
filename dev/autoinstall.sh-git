@@ -1,5 +1,7 @@
-for module in sugar-artwork sugar-toolkit-gtk3 sugar-datastore sugar sugar-runner sugar-toolkit2-gtk3 gwebsockets;
+for module in {sugar-artwork, sugar-toolkit-gtk3, sugar-datastore, sugar, sugar-runner, sugar-toolkit2-gtk3, gwebsockets}-git;
+do
 	cd $module
 	makepkg -si 
 	cd ..
+done
 echo Done

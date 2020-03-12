@@ -1,6 +1,6 @@
 # Maintainer: Srevin Saju <srevin03@gmail.com>
-pkgname=gwebsockets
-pkgver=0.7-git
+pkgname=gwebsockets-git
+pkgver=0.7.g
 pkgrel=5
 pkgdesc="A websocket server written in Python"
 arch=('any')
