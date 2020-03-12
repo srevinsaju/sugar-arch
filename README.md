@@ -2,14 +2,24 @@
 
 ## How to install
 
-### Stable
+## Official Method 
+```bash
+# install yay package manager / pamac gui package manager for arch linux, enable AUR support
+yay -S sugar-git sugar-toolkit-gtk3-git sugar-artwork-git sugar-datastore-git gwebsockets-git
+# if you wish to use python2 support also
+yay -S sugar-toolkit2-gtk3-git
+# For sugar-runner and tools
+yay -S sugar-runner-git
+```
+
+### Stable (wip)
 ```
 cd stable
 chmod +x autoinstall.sh
 ./autoinstall.sh
 ```
 
-### Dev 
+### Dev (deprecated)
 ```
 cd dev
 chmod +x autoinstall.sh-git
